@@ -36,7 +36,7 @@ export default function Kontak(){
                             <label htmlFor="keperluan" className="block font-semibold">
                                 Keperluan
                             </label>
-                            <select id="keperluan" name="keperluan" className="mt-1 w-full rounded-lg border border-gray-300 bg-white p-2">
+                            <select id="keperluan" name="keperluan" className="mt-1 w-full rounded-lg border border-gray-300 bg-white p-2" required>
                                 <option value="">-- Pilih keperluan --</option>
                                 <option value="bertanya">Bertanya</option>
                                 <option value="kerja-sama">Kerja sama proyek</option>
