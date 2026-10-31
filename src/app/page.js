@@ -1,9 +1,9 @@
 import Hero from "@/components/Hero";
 import SkillCard from "@/components/SkillCard";
-import TentangSaya from "@/components/TentangSaya";
-import Hobi from "@/components/Hobi";
-import CitaCita from "@/components/CitaCita";
-import JadwalBelajar from "@/components/JadwalBelajar";
+import ProyekCard from "@/components/ProyekCard";
+import {proyek} from "@/data/proyek";
+import Link from "next/link";
+import Kartu from "@/components/Kartu";
 
 const skills = [
   { nama: "HTML", level: "Menengah"},
@@ -13,29 +13,7 @@ const skills = [
   { nama: "Javascript", level: "Dasar"},
 ];
 
-const hobi = [
-  { hobi: "Badminton"},
-  { hobi: "Berenang"},
-  { hobi: "Berlari"},
-  { hobi: "Basket"},
-  { hobi: "Sepak Bola"}
-];
-
-const rencana = [
-  { id: 1, rencana: "Menjaga fisik, kesehatan, serta mempersiapkan mental dan akademik sejak sekolah"},
-  { id: 2, rencana: "Mengikuti seleksi penerimaan POLRI setelah lulus sekolah"},
-  { id: 3, rencana: "Menjalani pendidikan pembentukan serta bertugas sebagai anggota POLRI yang profesional"}
-];
-
-const jadwal = [
-  { hari: "Senin", waktu: "22.00 - 01.30", kegiatan: "Mengerjakan tugas Kelas Industri UBIG"},
-  { hari: "Selasa", waktu: "22.00 - 00.00", kegiatan: "Mengerjakan tugas Kelas Industri UBIG"},
-  { hari: "Rabu", waktu: "19.00 - 20.00", kegiatan: "Mengerjakan tugas Kelas Industri UBIG dan mengumpulkan tugasnya"},
-  { hari: "Kamis", waktu: "18.30 - 21.30", kegiatan: "Zoom Meeting Kelas Industri UBIG"},
-  { hari: "Jum'at", waktu: "22.00 - 01.30", kegiatan: "Mengerjakan tugas Kelas Industri UBIG"},
-  { hari: "Sabtu", waktu: "22.00 - 02.00", kegiatan: "Mengerjakan tugas Kelas Industri UBIG"},
-  { hari: "Minggu", waktu: "20.00 - 22.00", kegiatan: "Mengerjakan tugas Kelas Industri UBIG"}
-];
+const proyekTerbaru = proyek.slice(-3);
 
 export default function Home() {
   return (
@@ -44,26 +22,29 @@ export default function Home() {
         nama="Akhmad Nauval"
         tagline="Siswa kelas XI SMKN 1 Pasuruan, calon Junior Web Developer di Kelas Industri UBIG."
         />
-
-      <TentangSaya/>
-      <div className="grid gap-4 md:grid-cols-2">
-        <Hobi hobi={hobi}/>
-        <CitaCita rencana={rencana}/>
-      </div>
-
+      
         <section className="mt-5">
           {/* Keahlian */}
-          <div className="rounded-xl border-gray-200 bg-white p-5 shadow-sm">
-            <h2 className="mb-4 text-2xl font-bold text-utama">Keahlian</h2>
+            <h2 className="mb-4 text-2xl font-bold text-utama mt-9">Keahlian</h2>
             <div className="grid gap-4 md:grid-cols-3">
               {skills.map((skill) => (
                 <SkillCard key={skill.nama} nama={skill.nama} level={skill.level}/>
               ))}
             </div>
-          </div>
         </section>
-
-        <JadwalBelajar jadwal={jadwal}/>
+        
+        {/* Proyek Terbaru */}
+        <section className="mt-10">
+              <h2 className="mb-4 text-2xl font-bold text-utama">Proyek Terbaru</h2>
+              <div className="grid gap-6 md:grid-cols-3">
+                {proyekTerbaru.map((item) =>(
+                  <ProyekCard key={item.slug} proyek={item}/>
+                ))}
+              </div>
+              <Link href="/proyek" className="mt-6 inline-block rounded-lg bg-utama px-5 py-2 font-semibold text-white">
+                Lihat semua proyek
+              </Link>
+        </section>
     </main>
   );
 }
