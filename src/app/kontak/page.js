@@ -1,4 +1,4 @@
-import Kartu from "@/components/Kartu";
+import FormKontak from "@/components/FormKontak";
 
 export const metadata = {
     title: "Kontak",
@@ -8,59 +8,23 @@ export const metadata = {
 export default function Kontak(){
     return(
         <main className="mx-auto max-w-5xl px-4 py-10">
-            <h1 className="text-3xl font-bold text-utama md:text-4xl">Hubungi Saya</h1>
-            <p className="mt-3 text-lg text-gray-700">Punya pertanyaan atau ingin bekerja sama? Isi form berikut.</p>
+            <h1 className="text-3xl font-bold text-utama dark:text-sky-200 md:text-4xl">Hubungi Saya</h1>
+            <p className="mt-3 text-lg text-gray-700 dark:text-gray-300">Punya pertanyaan atau ingin bekerja sama? Isi form berikut.</p>
 
-            <div className="grid gap-4 md:grid-cols-[2fr_1fr]">
-                <Kartu judul="">
-                    <form className="space-y-4">
-                        <div>
-                            <label htmlFor="nama" className="block font-semibold">
-                                Nama lengkap
-                            </label>
-                            <input type="text" id="nama" name="nama" placeholder="Contoh: Akhmad Nauval" required className="mt-1 w-full rounded-lg border border-gray-300 bg-white p-2"/>
-                        </div>
-                        <div>
-                            <label htmlFor="email" className="block font-semibold">
-                                Email
-                            </label>
-                            <input type="email" id="email" name="email" placeholder="nama@gmail.com" required className="mt-1 w-full rounded-lg border border-gray-300 bg-white p-2"/>
-                        </div>
-                        <div>
-                            <label htmlFor="hp" className="block font-semibold">
-                                Nomor HP
-                            </label>
-                            <input type="tel" id="hp" name="hp" placeholder="08123456789" required className="mt-1 w-full border border-gray-300 rounded-lg bg-white p-2"/>
-                        </div>
-                        <div>
-                            <label htmlFor="keperluan" className="block font-semibold">
-                                Keperluan
-                            </label>
-                            <select id="keperluan" name="keperluan" className="mt-1 w-full rounded-lg border border-gray-300 bg-white p-2" required>
-                                <option value="">-- Pilih keperluan --</option>
-                                <option value="bertanya">Bertanya</option>
-                                <option value="kerja-sama">Kerja sama proyek</option>
-                                <option value="lainnya">Lainnya</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label htmlFor="pesan" className="block font-semibold">
-                                Pesan
-                            </label>
-                            <textarea id="pesan" name="pesan" rows="5" cols="40" required placeholder="Tulis pesanmu di sini" className="mt-1 w-full rounded-lg border border-gray-300 bg-white p-2"></textarea>
-                        </div>
-                        <button type="submit" className="mt-6 inline-block rounded-lg bg-red-700 px-5 py-2 font-semibold text-white">Kirim Pesan</button>
-                    </form>
-                </Kartu>
+            <div className="mt-8 grid gap-6 md:grid-cols-3">
+                <section className="rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6 shadow-sm md:col-span-2">
+                        <FormKontak/>
+                </section>
 
-                <Kartu judul="Temukan saya di">
+                <section className="rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 p-6 shadow-sm md:col-span-1">
+                    <h2 className="mb-3 text-2xl font-bold text-utama dark:text-sky-200">Temukan saya di</h2>
                     <div>
                         <a href="https://github.com/akhmadnauval03-droid" className="text-red-700">GitHub</a>
                     </div>
                     <div>
                         <a href="mailto:akhmadnauval03@gmail.com" className="text-red-700">akhmadnauval03@gmail.com</a>
                     </div>
-                </Kartu>
+                </section>
             </div>
         </main>
     );

@@ -12,7 +12,7 @@ export const proyek = [
     {
         slug: "website-smkn-1-pasuruan",
         judul: "Website SMKN 1 PASURUAN",
-        kategori: "Web",
+        kategori: "HTML",
         minggu: "Minggu 02",
         gambar: "/proyek/web-skensa.png",
         deskripsi: "Situs web SMKN 1 PASURUAN merupakan platform profil pendidikan digital interaktif yang dirancang sebagai pusat informasi resmi sekolah.",
@@ -29,7 +29,7 @@ export const proyek = [
     {
         slug: "management-siswa",
         judul: "Management Siswa",
-        kategori: "Web",
+        kategori: "Next.js",
         minggu: "Minggu 03",
         gambar: "/proyek/management.png",
         deskripsi: "Sistem manajemen siswa berbasis web yang dikembangkan untuk membantu sekolah mengelola data siswa secara efisien.",
@@ -43,7 +43,7 @@ export const proyek = [
     {
         slug: "website-portofolio",
         judul: "Website Portofolio",
-        kategori: "Web",
+        kategori: "Next.js",
         minggu: "Minggu 04",
         gambar: "/proyek/portfolio.png",
         deskripsi: "Situs web portofolio pribadi yang menampilkan profil, keterampilan, dan berbagai proyek pengembangan web.",
@@ -58,8 +58,8 @@ export const proyek = [
     },
     {
         slug: "portofolio-next-nauval",
-        judul: "Portofolio Nauval",
-        kategori: "web",
+        judul: "Website Portofolio Nauval",
+        kategori: "JavaScript",
         minggu: "Minggu 05",
         gambar: "/proyek/nextporto.png",
         deskripsi: "Web portofolio ini adalah situs pribadi milik Akhmad Nauval. Situs ini dirancang sebagai wadah profesional untuk menampilkan profil, keterampilan, dan daftar proyek yang telah dikerjakan.",
