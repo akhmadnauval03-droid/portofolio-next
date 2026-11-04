@@ -23,7 +23,7 @@ export const proyek = [
             "Galeri: Menampilkan dokumentasi kegiatan dan fasilitas sekolah.",
             "Biodata: Menampilkan data pembuat website.",
             "Buku Tamu: Formulir interaktif untuk menerima pesan dan masukan dari pengunjung website.",
-            "Footer berisi identitas dan informasi sekolah",
+            "Footer berisi identitas dan informasi sekolah"
         ],
     },
     {
@@ -41,8 +41,8 @@ export const proyek = [
         ],
     },
     {
-        slug: "website-portofolio",
-        judul: "Website Portofolio",
+        slug: "portofolio-akhmad-nauval",
+        judul: "Website Portofolio Akhmad Nauval",
         kategori: "Next.js",
         minggu: "Minggu 04",
         gambar: "/proyek/portfolio.png",
@@ -57,8 +57,8 @@ export const proyek = [
         ],
     },
     {
-        slug: "portofolio-next-nauval",
-        judul: "Website Portofolio Nauval",
+        slug: "portofolio-next-akhmad-nauval",
+        judul: "Website Portofolio Next Akhmad Nauval",
         kategori: "JavaScript",
         minggu: "Minggu 05",
         gambar: "/proyek/nextporto.png",
