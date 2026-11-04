@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const skills = [
   { nama: "HTML", level: "Menengah"},
-  { nama: "CSS", level: "menengah"},
+  { nama: "CSS", level: "Menengah"},
   { nama: "Git dan GitHub", level: "Dasar"},
   { nama: "Desain poster dengan Canva", level: "Mahir"},
   { nama: "Javascript", level: "Dasar"},

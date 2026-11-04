@@ -19,7 +19,7 @@ Daftar proyek portofolio Akhmad Nauval.
 | `fitur` | `text[]` | Daftar hal yang dipelajari (array teks) |
 | `gambar_url` | `text` | Alamat gambar di folder `public`, misalnya `/proyek/proyek-profil.png` |
 
-RLS aktif, Policy `Pengunjung boleh membaca proyek`: peran `anon` boleh `select` semua baris.
+RLS aktif. Policy `Pengunjung boleh membaca proyek`: peran `anon` boleh `select` semua baris.
 
 ## Tabel `messages`
 
@@ -34,3 +34,16 @@ Pesan dari form kontak.
 | `pesan` | `text` | Isi pesan |
 
 RLS aktif tanpa policy, sehingga pengunjung tidak bisa membaca pesan, Policy `insert` dibuat Minggu 15.
+
+## Tabel `skills`
+
+Daftar keahlian Akhmad Nauval.
+
+| Kolom | Tipe | Keterangan |
+| --- | --- | --- |
+| `id` | `int8`| Primary key, nomor otomatis 1, 2, 3, ... |
+| `craeted_at` | `timestamptz` | Waktu baris dibuat, terisi otomatis dengan `now()` |
+| `nama` | `text` | Nama keahlian |
+| `level` | `text` | Dasar, Menengah, atau Mahir |
+
+RLS aktif. Policy `Pengunjung boleh membaca keahlian`: peran `anon` boleh `select` semua baris.
