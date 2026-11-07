@@ -11,9 +11,9 @@ export default function JadwalBelajar({jadwal}){
                     </tr>
                 </thead>
 
-                <tbody className="text-gray-800 dark:text-gray-100">
+                <tbody className="text-foreground">
                     {jadwal.map((item) => (
-                        <tr key={item.hari} className="border-b border-gray-300 dark:border-gray-600">
+                        <tr key={item.hari} className="border-b border-input">
                            <td className="p-2">{item.hari}</td>
                            <td className="p-2">{item.waktu}</td>
                            <td className="p-2">{item.kegiatan}</td> 
