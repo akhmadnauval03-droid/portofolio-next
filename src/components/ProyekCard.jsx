@@ -19,7 +19,7 @@ export default function ProyekCard({proyek}) {
                 />
                 <CardHeader>
                     <Badge>{proyek.kategori}</Badge>
-                    <CardTitle className="text-lg text-primary">{item.judul}</CardTitle>
+                    <CardTitle className="text-lg text-primary">{proyek.judul}</CardTitle>
                     <CardDescription>{proyek.deskripsi}</CardDescription>
                 </CardHeader>
             </Card>
