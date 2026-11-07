@@ -6,6 +6,8 @@ export const metadata = {
     description: "Daftar proyek HTML, CSS, dan JavaScript karya Akhmad Nauval.",
 };
 
+export const revalidate = 0;
+
 export default async function DaftarProyek() {
     const {data: proyek, error} = await supabase
         .from("projects")

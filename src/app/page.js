@@ -14,6 +14,7 @@ const skills = [
 ];
 
 // const proyekTerbaru = proyek.slice(-3);
+export const revalidate = 0;
 
 export default async function Home() {
   const {data: proyekTerbaru} = await supabase
