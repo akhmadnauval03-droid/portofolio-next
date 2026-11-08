@@ -1,4 +1,5 @@
 import FormKontak from "@/components/FormKontak";
+import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";
 
 export const metadata = {
     title: "Kontak",
@@ -12,19 +13,31 @@ export default function Kontak(){
             <p className="mt-3 text-lg text-muted-foreground">Punya pertanyaan atau ingin bekerja sama? Isi form berikut.</p>
 
             <div className="mt-8 grid gap-6 md:grid-cols-3">
-                <section className="rounded-xl border border-border bg-card p-6 shadow-sm md:col-span-2">
+                <Card className="md:col-span-2">
+                    <CardContent>
                         <FormKontak/>
-                </section>
-
-                <section className="rounded-xl border border-border bg-card p-6 shadow-sm md:col-span-1">
-                    <h2 className="mb-3 text-2xl font-bold text-primary">Temukan saya di</h2>
-                    <div>
-                        <a href="https://github.com/akhmadnauval03-droid" className="text-red-700">GitHub</a>
-                    </div>
-                    <div>
-                        <a href="mailto:akhmadnauval03@gmail.com" className="text-red-700">akhmadnauval03@gmail.com</a>
-                    </div>
-                </section>
+                    </CardContent>
+                </Card>
+                        
+                <Card>
+                    <CardHeader>
+                        <CardTitle className="text-2xl font-bold text-primary">Temukan Saya di</CardTitle>
+                    </CardHeader>
+                    <CardContent className="px-5">
+                        <ul className="space-y-2">
+                            <li>
+                                <a href="https://github.com/akhmadnauval03-droid" target="_blank" className="text-aksen hover:underline">
+                                    Github
+                                </a>
+                            </li>
+                            <li>
+                                <a href="mailto:akhmadnauval03@gmail.com" className="text-aksen hover:underline">
+                                    akhmadnauval03@gmail.com
+                                </a>
+                            </li>
+                        </ul>
+                    </CardContent>
+                </Card>
             </div>
         </main>
     );

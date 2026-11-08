@@ -1,9 +1,10 @@
 "use client";
 
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
+import {Button} from "@/components/ui/button";
 
 export default function TombolTema(){
-    // const [gelap, setGelap] = useState(false);
+    const [gelap, setGelap] = useState(false);
 
     // function gantiTema() {
     //     document.documentElement.classList.toggle("dark");
@@ -21,13 +22,11 @@ export default function TombolTema(){
     }
 
     return (
-        <button
-            type="button"
-            onClick={gantiTema}
-            className="rounded-lg border border-white px-3 py-1 text-sm font-semibold text-white hover:border-aksen hover:bg-aksen"
-            >
-                <span className="hidden dark:inline">Mode Terang</span>
-                <span className="dark:hidden">Mode Gelap</span>
-        </button>
+        <Button 
+            variant="outline"
+            onClick={gantiTema} 
+            className="border-white bg-transparent text-white hover:bg-aksen hover:text-white">
+                {gelap ? "Mode Terang" : "Mode Gelap"}
+        </Button>
     );
 }

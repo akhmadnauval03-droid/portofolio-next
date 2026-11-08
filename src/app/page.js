@@ -5,15 +5,13 @@ import {supabase} from "@/lib/supabase";
 import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
 
-const skills = [
-  { nama: "HTML", level: "Menengah"},
-  { nama: "CSS", level: "Menengah"},
-  { nama: "Git dan GitHub", level: "Dasar"},
-  { nama: "Desain poster dengan Canva", level: "Mahir"},
-  { nama: "Javascript", level: "Dasar"},
-];
+export const revalidate = 60;
 
 export default async function Home() {
+  const {data: skills} = await supabase
+    .from("skills")
+    .select("*")
+    .order("id")
   const {data: proyekTerbaru} = await supabase
     .from("projects")
     .select("*")

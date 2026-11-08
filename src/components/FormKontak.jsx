@@ -1,6 +1,7 @@
 "use client";
 
 import {useState} from "react";
+import {Button} from "@/components/ui/button";
 
 const kelasInput = "mt-1 w-full rounded-lg border border-input bg-card p-2";
 
@@ -113,7 +114,7 @@ export default function FromKontak(){
                 </textarea>
                 {error.pesan && <p className="mt-1 text-sm text-aksen">{error.pesan}</p>}
             </div>
-            <button type="submit" className="mt-6 inline-block rounded-lg bg-red-700 px-5 py-2 font-semibold text-white">Kirim Pesan</button>
+            <Button type="submit" size="lg" className="mt-6 inline-block rounded-lg bg-red-700 px-5 py-2 font-semibold text-white">Kirim Pesan</Button>
                 {berhasil && (
                 <p className="rounded-lg bg-green-100 p-3 text-green-800 dark:bg-green-900 dark:text-green-100">Terima kasih, {nama}! Pesanmu sudah lolos pemeriksaan.</p>
             )}
