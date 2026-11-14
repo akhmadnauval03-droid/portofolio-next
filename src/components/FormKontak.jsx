@@ -39,7 +39,7 @@ export default function FromKontak(){
     }
 
     return (
-        <form onSubmit={kirim} noValidate className="space-y-4">
+        <form onSubmit={kirim} noValidate className="space-y-4 ">
             <div>
                 <label htmlFor="nama" className="block font-semibold">
                     Nama lengkap
@@ -116,8 +116,10 @@ export default function FromKontak(){
             </div>
             <Button type="submit" size="lg" className="mt-6 inline-block rounded-lg bg-red-700 px-5 py-2 font-semibold text-white">Kirim Pesan</Button>
                 {berhasil && (
-                <p className="rounded-lg bg-green-100 p-3 text-green-800 dark:bg-green-900 dark:text-green-100">Terima kasih, {nama}! Pesanmu sudah lolos pemeriksaan.</p>
+                <p className="rounded-lg bg-green-100 p-3 text-green-800 dark:bg-green-900 dark:text-green-100">Terima kasih, {nama}! Form ini belum mengirim pesan. Untuk menyapa saya, tulis pesan di halaman Buku Tamu.</p>
             )}
         </form>
     );
 }
+
+// Pesanmu sudah lolos pemeriksaan.
