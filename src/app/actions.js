@@ -17,5 +17,9 @@ export async function kirimPesan(stateSebelum, formData) {
         return {error: `Pesan gagal disimpan: ${error.message}`,nama,pesan};
     }
     revalidatePath("/buku-tamu");
-    return {berhasil: `Terima kasih, ${nama}! Pesanmu sudah tersimpan.`}
+    return {
+        berhasil: `Terima kasih, ${nama}! Pesanmu sudah tersimpan.`,
+        nama: "",
+        pesan: ""
+    };
 }
