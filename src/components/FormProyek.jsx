@@ -36,15 +36,7 @@ export default function FormProyek({ aksi, proyek, teksTombol}) {
             </div>
             <div className="space-y-2">
                 <Label htmlFor="fitur">Yang saya pelajari (satu baris satu poin)</Label>
-                <Textarea 
-                    id="fitur"
-                    name="fitur"
-                    defaultValue={
-                        Array.isArray(state.proyek?.fitur)
-                            ? state.proyek.fitur.join("\n")
-                            : state.proyek?.fitur || ""
-                    }
-                />
+                <Textarea id="fitur" name="fitur" rows={3} defaultValue={state.proyek.fitur.join("\n")}/>
             </div>
             <div className="space-y-2">
                 <Label htmlFor="gambar_url">Alamat gambar</Label>
