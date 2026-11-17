@@ -14,6 +14,7 @@ export default function FormBukuTamu() {
         if (hasil.berhasil) {
             toast.success(hasil.berhasil);
         }
+        return hasil;
     }
     const [state, formAction] = useActionState(kirimDanBeriTahu, {nama: "", pesan: ""});
     
@@ -28,8 +29,8 @@ export default function FormBukuTamu() {
                 <Textarea id="pesan" name="pesan" rows={4} maxLength={300} placeholder="Tulis kesan atau sapaanmu" defaultValue={state?.pesan || ""}/> 
             </div>
             <TombolKirim teks="Kirim Pesan"/>
-            {state?.error && <p className="text-sm text-aksen">{state.error}</p>}
-            {state?.berhasil && <p className="text-sm font-medium text-primary">{state.berhasil}</p>}
+            {state.error && <p className="text-sm text-aksen">{state.error}</p>}
+            {state.berhasil && <p className="text-sm font-medium text-primary">{state.berhasil}</p>}
         </form>
     );
 }
